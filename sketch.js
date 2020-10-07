@@ -59,16 +59,3 @@ function keyPressed() {
     	Matter.Body.applyForce(bobObject1.body,bobObject1.body.position,{x:-50,y:-45});
   	}
 }
-
-
-function drawLine(constraint)
-{
-	bobBodyPosition=constraint.bodyA.position;
-	roofBodyPosition=constraint.bodyB.position;
-
-	roofBodyOffset=constraint.pointB;
-	
-	roofBodyX=roofBodyPosition.x+roofBodyOffset.x;
-	roofBodyY=roofBodyPosition.y+roofBodyOffset.y;
-	line(bobBodyPosition.x, bobBodyPosition.y, roofBodyX, roofBodyY);
-}
